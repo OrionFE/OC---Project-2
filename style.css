@@ -149,6 +149,7 @@ button[type=submit]{
     border : solid 2px lightgray;
     border-radius: 50px;
     position: relative;
+    cursor: pointer;
 }
 
 .filters li::before{
