@@ -745,16 +745,16 @@ footer li{
     h2{
         font-size: 20px;
         font-weight: 800;
+        width: 335px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 30px 0 20px 0;
     }
 
     .populaires h2 span{
-        margin-left: 126px;
         font-size: 24px;
-    }
-
-    .populaires h2{
-        position: relative;
-        left: -9px;
+        margin-left: 0px;
     }
 
     .populaires_card{
@@ -785,14 +785,13 @@ footer li{
         width: 100%;
     }
 
-    .hebergement h2{
-        margin-left: 20px;
-    }
-
     .section_hebergement{
         width: 375px;
         background-color: white;
         height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .list_hebergement .card{
@@ -815,9 +814,10 @@ footer li{
     }
 
     .more{
+        width: 90%;
         font-size: 16px;
         font-weight: 700;
-        margin-left: 20px;
+        margin: 30px 0;
     }
 
     .activites{
@@ -825,10 +825,6 @@ footer li{
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .activites h2{
-        margin-left: -140px;
     }
 
     .activites_list{
@@ -883,6 +879,36 @@ footer li{
     footer li{
         font-size: 12px;
     }
+
+}
+
+@media (max-width: 375px){
+
+    h2{
+        width: 310px;
+    }
+
+    .populaires_card{
+        width: 310px;
+    }
+
+    .section_hebergement{
+        width: 310px;
+    }
+
+    .list_hebergement .card{
+        width: 310px;
+    }
+
+    .activites_card, .small_card, .medium_card{
+        height: 190px;
+        width: 310px;
+    }
+
+    footer{
+        width: 320px;
+    }
+
 
 }
 
