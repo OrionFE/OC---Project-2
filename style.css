@@ -469,6 +469,7 @@ footer h3{
 }
 
 footer ul{
+    height: 50px;
     display: flex;
     flex-direction: column;
     gap : 8px
