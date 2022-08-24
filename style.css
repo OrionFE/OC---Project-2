@@ -47,7 +47,8 @@ nav{
 header{
     width: 950px;
     height: 320px;
-    margin-top: 50px;
+    padding-top: 50px;
+    position: relative;
 }
 
 
@@ -57,7 +58,7 @@ header{
     background-color: var(--mainblue);
 }
 
-.blue_line_activite{
+.blue_line_hebergement, .blue_line_activite{
     visibility: hidden;
 }
 
@@ -71,12 +72,12 @@ header{
     font-weight: 300;
 }
 
-.hebergement_menu a{
+.hebergement_menu:hover a{
     color: var(--mainblue);
 }
 
-.hebergement_menu:hover a{
-    color: var(--mainblue);
+.hebergement_menu:hover .blue_line_hebergement{
+    visibility: visible;
 }
 
 .activite_menu:hover .blue_line_activite{
@@ -171,7 +172,6 @@ button[type=submit]{
     position: absolute;
     height: 100%;
     width: 20%;
-    transition: linear 200ms;
     border-radius: 50px;
     z-index: -1;
 }
@@ -637,12 +637,13 @@ footer li{
         width: 100%;
     }
 
-    .blue_line_activite{
+    .blue_line_hebergement, .blue_line_activite{
         background-color: var(--bgGray);
         visibility: visible;
     }
 
-    .blue_line_activite:hover{
+    .hebergement_menu:hover .blue_line_hebergement, 
+    .activite_menu:hover .blue_line_activite{
         background-color: var(--mainblue);
     }
 
@@ -741,6 +742,7 @@ footer li{
 
     .populaires_list{
         flex-direction: column;
+        width: 100%;
     }
 
     h2{
@@ -750,7 +752,8 @@ footer li{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 30px 0 20px 0;
+        margin: 30px 0 20px 10%;
+        align-self: flex-start;
     }
 
     .populaires h2 span{
@@ -759,7 +762,7 @@ footer li{
     }
 
     .populaires_card{
-        width: 335px;
+        width: 80%;
         height: 145px;
     }
 
@@ -787,7 +790,7 @@ footer li{
     }
 
     .section_hebergement{
-        width: 375px;
+        width: 100%;
         background-color: white;
         height: fit-content;
         display: flex;
@@ -796,7 +799,7 @@ footer li{
     }
 
     .list_hebergement .card{
-        width: 335px;
+        width: 80%;
         height: 200px;
     }
 
@@ -818,7 +821,7 @@ footer li{
         width: 90%;
         font-size: 16px;
         font-weight: 700;
-        margin: 30px 0;
+        margin: 30px 0 30px 10%;
     }
 
     .activites{
@@ -828,15 +831,35 @@ footer li{
         align-items: center;
     }
 
+    .activites h2{
+        margin: 0 0 15px 10%;
+    }
+
+    .section, .small_section{
+        width: 100%;
+    }
+
+    .section a, .small_section a{
+        width: 80%;
+    }
+
+    .section, .small_section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     .activites_list{
         flex-wrap: nowrap;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .activites_card, .small_card, .medium_card{
         height: 190px;
-        width: 335px;
+        width: 100%;
     }
 
     .small_section{
